@@ -6,16 +6,11 @@ using System.Web.Mvc;
 
 namespace TravelTripProje.Controllers
 {
-    public class DefaultController : Controller
+    public class BlogController : Controller
     {
-        // GET: Default
+        // GET: Blog
         public ActionResult Index()
         {
-            return View();
-        }
-        public ActionResult About()
-        {
-
             return View();
         }
     }

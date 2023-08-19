@@ -1,0 +1,23 @@
+﻿@using TravelTripProje.Models.Siniflar @*sınıflar isimli klasöre ulaş sonrasında model oluşturup 
+                                           listelemek istediğimiz değerleri oluşturuyoruz bir koleksiyon gibi
+                                           listelemek istediğimiz sınıfta Hakkimizda sınıfnın değerleri*@
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>Hakkımızda</h3>
+            @foreach (var x in Model) //MVC'de genellikle listeleme işlemleri için foreach döngüsü oluşturulur. foreachin 4 parametresi var
+                                     //var c in model => değişken değerleri modelden alacak modeldede hakkimizda listesi var.
+            {
+                <img src="@x.FotoUrl" alt="" />
+                <p>@x.Aciklama</p>
+            }
+
+        </div>
+    </div>
+</div>
