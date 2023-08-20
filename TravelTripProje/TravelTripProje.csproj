@@ -327,6 +327,7 @@
     <Content Include="web2\webfonts\fa-solid-900.woff" />
     <Content Include="web2\webfonts\fa-solid-900.woff2" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\BlogDetay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
