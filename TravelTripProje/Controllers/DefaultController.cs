@@ -14,7 +14,7 @@ namespace TravelTripProje.Controllers
         public ActionResult Index()
         {
 
-            var degerler = c.Blogs.ToList();
+            var degerler = c.Blogs.Take(4).ToList(); //ilk 10 bloğu getir
             return View(degerler);
         }
         public ActionResult About()
@@ -30,6 +30,21 @@ namespace TravelTripProje.Controllers
         public PartialViewResult Partial2()
         {
             var deger = c.Blogs.Where(x => x.ID ==3  ).ToList();
+            return PartialView(deger);
+        }
+        public PartialViewResult Partial3()
+        {
+            var deger = c.Blogs.ToList();
+            return PartialView(deger);
+        }
+        public PartialViewResult Partial4()
+        {
+            var deger = c.Blogs.Take(3).ToList();
+            return PartialView(deger);
+        }
+        public PartialViewResult Partial5()
+        {
+            var deger = c.Blogs.Take(3).OrderByDescending(x => x.ID).ToList();  //ID'ye göre z'den a2ya yani büyükten küçüğe doğru sırala
             return PartialView(deger);
         }
     }

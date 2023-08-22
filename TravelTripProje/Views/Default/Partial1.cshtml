@@ -5,12 +5,12 @@
     {
         <div class="left" @*style="width:29%"*@  >
             <div class="bot-left">
-                <img src="@x.BlogImage" alt="" />
+                <img src="@x.BlogImage" style="width=300px; height:150px;" alt="" />
             </div>
             <div class="left-text">
                 <h4>@x.Baslik</h4>
-                <span class="doller">@x.Tarih</span>
-                <p>Açıklama gelecek.</p>
+                <span class="doller">@x.Tarih.ToString("dd.MM.yy")</span>
+                <p>@x.Aciklama.Substring(0,100)</p>  @*indexten belirlemiş olduğumuz indexe kadar karakter*@
                 <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Devamını oku >></span></a></p>
             </div>
         </div>
