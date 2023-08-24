@@ -339,6 +339,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\YeniBlog.cshtml" />
     <Content Include="Views\Admin\BlogGetir.cshtml" />
+    <Content Include="Views\Blog\YorumYap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

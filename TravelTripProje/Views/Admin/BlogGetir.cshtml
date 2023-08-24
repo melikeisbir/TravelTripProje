@@ -10,8 +10,7 @@
                                                                   //Admin controllerın içinde Formmethod ile sayfada bir methoda tıklanıp post edildiğinde calısacak
 {
     @Html.LabelFor(x => x.ID)
-    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
-    <br />
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" , @readonly="readonly"}) //sadece okunabilir yazılamaz
     @Html.LabelFor(x => x.Baslik)
     @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
     <br />
@@ -22,7 +21,7 @@
     @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
     <br />
     @Html.LabelFor(x => x.Aciklama)
-    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    @Html.TextAreaFor(x => x.Aciklama,15,1, new { @class = "form-control" }) //15 satır 1 sütun
     <br />
     <button class="btn btn-success">Blog Güncelle</button>
 }
