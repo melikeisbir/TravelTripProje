@@ -11,6 +11,7 @@ namespace TravelTripProje.Controllers
     {
         // GET: Admin
         Context c = new Context();
+        [Authorize]
         public ActionResult Index()
         {
             var degerler = c.Blogs.ToList();
@@ -76,7 +77,7 @@ namespace TravelTripProje.Controllers
             yrm.Mail = y.Mail;
             yrm.Yorum = y.Yorum;
             c.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("YorumListesi");
         }
     }
 }
